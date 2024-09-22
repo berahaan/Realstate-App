@@ -1,11 +1,22 @@
 import React from "react";
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
+import Home from "./pages/Home";
 function App() {
   return (
-    <div className="text-lg text-teal-300">
-      App
-      {/* we can use a control plus space for a suggestions  */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/about" element={<Home />}></Route>
+        <Route path="/contact" element={<Home />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
